@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/padding_20">
+
+    <ImageView
+        android:id="@+id/imageOnBoarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_onboard1"
+        tools:ignore="ImageContrastCheck" />
+
+
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24"
+        android:text="@string/get_free_udemy_courses"
+        android:textSize="@dimen/text_18"
+        android:fontFamily="@font/epilogue_regular"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintEnd_toEndOf="@+id/imageOnBoarding"
+        app:layout_constraintStart_toStartOf="@+id/imageOnBoarding"
+        app:layout_constraintTop_toBottomOf="@+id/imageOnBoarding" />
+
+    <TextView
+        android:id="@+id/body_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24"
+        android:text="@string/copy_text"
+        android:textSize="@dimen/text_14"
+        android:lineSpacingExtra="5dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/epilogue_regular"
+        android:textStyle="normal"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

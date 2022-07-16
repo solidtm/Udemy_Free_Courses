@@ -1,6 +1,15 @@
 <resources>
-    <string name="app_name">Udemy Free Courses</string>
+    <string name="app_name">UFC</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="udemy_free_courses">Udemy Free Courses</string>
+    <string name="skip">Skip</string>
+    <string name="previous">Previous</string>
+    <string name="start">Start!</string>
+    <string name="get_free_udemy_courses">Get Free Udemy Courses</string>
+    <string name="copy_text">Save the hassle of searching, have access\n to thousands of free Udemy courses\n based on their categories</string>
 </resources>
