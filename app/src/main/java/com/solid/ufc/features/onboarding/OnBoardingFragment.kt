@@ -12,20 +12,20 @@ import androidx.viewpager2.widget.ViewPager2
 import com.solid.ufc.HomeActivity
 import com.solid.ufc.R
 import com.solid.ufc.data.model.onboarding.OnBoardingItem
-import com.solid.ufc.databinding.FragmentOnboardingragmentBinding
+import com.solid.ufc.databinding.FragmentOnboardingBinding
 import kotlin.math.abs
 
 
-class OnBoardingFragment : Fragment(R.layout.fragment_onboardingragment),
+class OnBoardingFragment : Fragment(R.layout.fragment_onboarding),
     ViewPager2.PageTransformer {
-    private lateinit var binding: FragmentOnboardingragmentBinding
+    private lateinit var binding: FragmentOnboardingBinding
     private lateinit var adapter: OnBoardingItemsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentOnboardingragmentBinding.inflate(layoutInflater)
+        binding = FragmentOnboardingBinding.inflate(layoutInflater)
 
         binding.viewPager.isUserInputEnabled = false
         binding.viewPager.setPageTransformer(this)
@@ -81,6 +81,7 @@ class OnBoardingFragment : Fragment(R.layout.fragment_onboardingragment),
                     binding.onboardProgressBar.progress = 75
                 }
                 else -> {
+                    findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment)
                 }
             }
         }
@@ -105,7 +106,7 @@ class OnBoardingFragment : Fragment(R.layout.fragment_onboardingragment),
 
     private fun configureSkipText() {
         binding.textSkip.setOnClickListener {
-            startActivity(Intent(requireContext(), HomeActivity::class.java))
+            findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment)
         }
     }
 

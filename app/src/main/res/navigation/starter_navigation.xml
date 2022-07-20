@@ -18,5 +18,61 @@
         android:id="@+id/onBoardingFragment"
         android:name="com.solid.ufc.features.onboarding.OnBoardingFragment"
         android:label="fragment_onboardingragment"
-        tools:layout="@layout/fragment_onboardingragment" />
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.solid.ufc.features.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetPassFragment"
+            app:destination="@id/resetPassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.solid.ufc.features.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_interestsFragment"
+            app:destination="@id/interestsFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassFragment"
+        android:name="com.solid.ufc.features.resetpassword.ResetPassFragment"
+        android:label="fragment_reset_pass"
+        tools:layout="@layout/fragment_reset_pass" >
+        <action
+            android:id="@+id/action_resetPassFragment_to_verifyFragment"
+            app:destination="@id/verifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interestsFragment"
+        android:name="com.solid.ufc.features.signup.InterestsFragment"
+        android:label="fragment_interests"
+        tools:layout="@layout/fragment_interests" />
+    <fragment
+        android:id="@+id/verifyFragment"
+        android:name="com.solid.ufc.features.resetpassword.VerifyFragment"
+        android:label="fragment_verify"
+        tools:layout="@layout/fragment_verify" >
+        <action
+            android:id="@+id/action_verifyFragment_to_createNewPassFragment"
+            app:destination="@id/createNewPassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPassFragment"
+        android:name="com.solid.ufc.features.resetpassword.CreateNewPassFragment"
+        android:label="fragment_create_new_pass"
+        tools:layout="@layout/fragment_create_new_pass" />
 </navigation>

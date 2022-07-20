@@ -12,4 +12,22 @@
     <string name="start">Start!</string>
     <string name="get_free_udemy_courses">Get Free Udemy Courses</string>
     <string name="copy_text">Save the hassle of searching, have access\n to thousands of free Udemy courses\n based on their categories</string>
+    <string name="sign_in_to_your_account">Sign In To Your Account</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">Or</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="don_t_have_an_account">Don\'t have an account?<font color="#B24D41"><b><u>  Sign Up</u></b></font></string>
+    <string name="already_have_an_account">Already have an account?<font color="#B24D41"><b><u>  Sign In</u></b></font></string>
+    <string name="create_an_account">Create An Account</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="password">Password</string>
+    <string name="by_creating_an_account_you_agree_our_terms_and_privacy_policy">By creating an account you agree our <font color="#B24D41"><b>\nTerms</b></font> and <font color="#B24D41"><b>Privacy Policy</b></font></string>
+    <string name="what_are_you_interested_in">What are you interested in?</string>
+    <string name="select_up_to_3_categories">Select up to 3 categories</string>
+    <string name="cont">Continue</string>
+    <string name="design">Design</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
