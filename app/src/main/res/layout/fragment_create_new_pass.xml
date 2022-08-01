@@ -3,12 +3,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".features.resetpassword.CreateNewPassFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_150"
+                android:background="@drawable/curved_toolbar"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_32"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/app_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_24"
+                android:background="@drawable/curved_layout"
+                app:layout_constraintTop_toBottomOf="@+id/tool_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <TextView
+                    android:id="@+id/label_create_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/create_new_password"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/text_22"
+                    android:fontFamily="@font/epilogue_regular"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/new_pass_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_32"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:endIconMode="custom"
+                    app:hintTextColor="@color/colorPrimaryText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/label_create_pass"
+                    app:layout_constraintTop_toBottomOf="@+id/label_create_pass">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/epilogue_regular"
+                        android:hint="@string/new_password"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/colorPrimaryText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/confirm_pass_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_32"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:endIconMode="custom"
+                    app:hintTextColor="@color/colorPrimaryText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/new_pass_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/new_pass_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/epilogue_regular"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/colorPrimaryText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_change_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:padding="@dimen/padding_12"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="@font/epilogue_regular"
+                    android:text="@string/change_my_password"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_16"
+                    app:layout_constraintEnd_toEndOf="@+id/confirm_pass_layout"
+                    app:layout_constraintStart_toStartOf="@+id/confirm_pass_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/confirm_pass_layout" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

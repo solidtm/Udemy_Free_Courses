@@ -143,4 +143,7 @@ dependencies {
 
     //circular imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //pinview
+    implementation 'io.github.chaosleung:pinview:1.4.4'
 }

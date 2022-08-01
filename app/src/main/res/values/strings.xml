@@ -18,7 +18,9 @@
     <string name="or">Or</string>
     <string name="continue_with_google">Continue with Google</string>
     <string name="enter_email_address">Enter email address</string>
+    <string name="email_address">Email address</string>
     <string name="don_t_have_an_account">Don\'t have an account?<font color="#B24D41"><b><u>  Sign Up</u></b></font></string>
+    <string name="did_not_receive_code">Didn\'t receive code?<font color="#B24D41"><b> Resend</b></font></string>
     <string name="already_have_an_account">Already have an account?<font color="#B24D41"><b><u>  Sign In</u></b></font></string>
     <string name="create_an_account">Create An Account</string>
     <string name="first_name">First name</string>
@@ -30,4 +32,45 @@
     <string name="cont">Continue</string>
     <string name="design">Design</string>
     <string name="sign_up">Sign Up</string>
+    <string name="enter_your_account_s_email_address">Enter your account\'s email address and a 5 digit code will be sent to you</string>
+    <string name="send_verification_code">Send verification code</string>
+    <string name="verify_it_s_you">Verify it\'s you</string>
+    <string name="enter_the_5_digit">Enter the 5 digit verification code that was sent to *******@gmail.com</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="create_new_password">Create New Password</string>
+    <string name="change_my_password">Change my password</string>
+    <string name="close_account">CLOSE ACCOUNT</string>
+    <string name="explore">Explore</string>
+    <string name="profile">Profile</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="account">Account</string>
+    <string name="jide_haruna">Jide Haruna</string>
+    <string name="jide_haruna_mail_com">jide.haruna@mail.com</string>
+    <string name="a_verification_link_sent">A verification link has just been sent to your email</string>
+    <string name="verify">VERIFY</string>
+    <string name="acct_settings">Account Settings</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="save">Save</string>
+    <string name="change_pass">Change password</string>
+    <string name="notifications">Notifications</string>
+    <string name="language">Language</string>
+    <string name="close_acct">Close account</string>
+    <string name="help_support">Help and Support</string>
+    <string name="about">About UFC</string>
+    <string name="freq_asked">Frequently asked questions</string>
+    <string name="share_app">Share the UFC app</string>
+    <string name="sign_out">Sign out</string>
+    <string name="version">UFC v1.0</string>
+    <string name="enter_current_password">Enter current password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_new_password">Confirm new password</string>
+    <string name="new_courses_reminders">New courses reminders</string>
+    <string name="wishlist_reminders">Wishlist reminders</string>
+    <string name="receive_email_notifications">Receive email notifications</string>
+    <string name="english">English</string>
+    <string name="french">French</string>
+    <string name="spanish">Spanish</string>
+    <string name="are_you_sure">Are you sure you want to close your account?</string>
+    <string name="find_a_course">Find a course you want to learn</string>
 </resources>

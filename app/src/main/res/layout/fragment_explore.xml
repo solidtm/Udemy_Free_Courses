@@ -6,17 +6,115 @@
     android:layout_height="match_parent"
     tools:context=".features.explore.ExploreFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/curved_toolbar_profile"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curved_toolbar_profile"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:text="Welcome Jide!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                android:fontFamily="@font/epilogue_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="@string/find_a_course"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+                android:textStyle="bold"
+                android:fontFamily="@font/epilogue_regular"
+                app:layout_constraintStart_toStartOf="@+id/welcome"
+                app:layout_constraintTop_toBottomOf="@+id/welcome"/>
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Search"
+                android:iconifiedByDefault="false"
+                android:layout_marginEnd="@dimen/height_100"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/searchview_background"
+                android:queryBackground="@android:color/transparent"
+                app:layout_constraintTop_toBottomOf="@id/find"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/onboard_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:padding="@dimen/margin_16"
+                android:background="@drawable/custom_filter_btn"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/previous"
+                app:layout_constraintStart_toEndOf="@id/searchView"
+                app:layout_constraintTop_toBottomOf="@id/find"
+                app:srcCompat="@drawable/ic_filter"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/top_rated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_24"
+        android:text="Top rated"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold"
+        android:fontFamily="@font/epilogue_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/padding_12"
+        android:paddingBottom="@dimen/md"
+        android:paddingEnd="@dimen/padding_12"
+        android:layout_marginBottom="@dimen/margin_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_rated" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

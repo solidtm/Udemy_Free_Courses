@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.profile.EditProfileFragment">
+
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:navigationIcon="@drawable/ic_arrow_left_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:fontFamily="@font/epilogue_regular"
+            android:text="@string/edit_profile"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:textStyle="bold"
+            android:fontFamily="@font/epilogue_regular"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </Toolbar>
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_32"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_profile_dummy"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/label_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/epilogue_regular"
+                android:text="@string/first_name"
+                android:textStyle="normal"
+                android:textColor="@color/colorTextAlt"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/first_name_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/colorTextAlt"
+                app:hintTextColor="@color/colorPrimaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/label_first_name"
+                app:layout_constraintTop_toBottomOf="@+id/label_first_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/epilogue_regular"
+                    android:inputType="textEmailAddress"
+                    android:text="Jide"
+                    android:textSize="@dimen/text_13"
+                    android:textColorHint="@color/colorPrimaryText"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/label_last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:fontFamily="@font/epilogue_regular"
+                android:text="@string/last_name"
+                android:textStyle="normal"
+                android:textColor="@color/colorTextAlt"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/first_name_layout" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/last_name_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/colorTextAlt"
+                app:hintTextColor="@color/colorPrimaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/label_last_name"
+                app:layout_constraintTop_toBottomOf="@+id/label_last_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/epilogue_regular"
+                    android:inputType="textEmailAddress"
+                    android:hint="Haruna"
+                    android:textSize="@dimen/text_13"
+                    android:textColorHint="@color/colorPrimaryText"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:fontFamily="@font/epilogue_regular"
+                android:text="@string/email_address"
+                android:textColor="@color/colorTextAlt"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/last_name_layout" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/colorTextAlt"
+                app:hintTextColor="@color/colorPrimaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/email_label"
+                app:layout_constraintTop_toBottomOf="@+id/email_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/epilogue_regular"
+                    android:inputType="textEmailAddress"
+                    android:hint="jide.haruna@gmail.com"
+                    android:textSize="@dimen/text_13"
+                    android:textColorHint="@color/colorPrimaryText"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

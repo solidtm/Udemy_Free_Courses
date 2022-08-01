@@ -3,23 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_explore">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_explore"
         android:name="com.solid.ufc.features.explore.ExploreFragment"
-        android:label="@string/title_home"
+        android:label="@string/explore"
         tools:layout="@layout/fragment_explore" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_wishlist"
         android:name="com.solid.ufc.features.wishlist.WishlistFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/wishlist"
         tools:layout="@layout/fragment_wishlist" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.solid.ufc.features.profile.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/navigation_profile"
+        android:name="com.solid.ufc.features.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_changePassFragment"
+            app:destination="@id/changePassFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_closeAccountFragment"
+            app:destination="@id/closeAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.solid.ufc.features.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/changePassFragment"
+        android:name="com.solid.ufc.features.profile.ChangePassFragment"
+        android:label="fragment_change_pass"
+        tools:layout="@layout/fragment_change_pass" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.solid.ufc.features.profile.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.solid.ufc.features.profile.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/closeAccountFragment"
+        android:name="com.solid.ufc.features.profile.CloseAccountFragment"
+        android:label="fragment_close_account"
+        tools:layout="@layout/fragment_close_account" />
 </navigation>

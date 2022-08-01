@@ -23,6 +23,7 @@
     <dimen name="padding_48">48dp</dimen>
 
     <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
     <dimen name="margin_4">4dp</dimen>
     <dimen name="margin_8">8dp</dimen>
     <dimen name="margin_10">10dp</dimen>
@@ -50,9 +51,10 @@
     <dimen name="text_86">86sp</dimen>
 
     <dimen name="corners_15">15dp</dimen>
+    <dimen name="corners_20">20dp</dimen>
     <dimen name="corners_10">10dp</dimen>
     <dimen name="md">30dp</dimen>
-    <dimen name="sm">20dp</dimen>
+    <dimen name="sm">18dp</dimen>
     <dimen name="xsm">10dp</dimen>
     <dimen name="btnSize">60dp</dimen>
     <dimen name="xxsm">5dp</dimen>

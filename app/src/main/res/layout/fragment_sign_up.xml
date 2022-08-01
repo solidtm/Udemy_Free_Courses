@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".features.signup.SignUpFragment">
 
@@ -17,12 +16,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/tool_bar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@drawable/curved_toolbar"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
@@ -48,7 +48,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:padding="@dimen/margin_24"
                 android:background="@drawable/curved_layout"
                 app:layout_constraintTop_toBottomOf="@+id/tool_bar"
@@ -166,6 +166,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="20dp"
                     android:button="@drawable/check_selector_bg"
+                    android:buttonTint="@color/colorAccent"
                     android:fontFamily="@font/epilogue_regular"
                     android:text="@string/by_creating_an_account_you_agree_our_terms_and_privacy_policy"
                     android:lineSpacingExtra="5dp"

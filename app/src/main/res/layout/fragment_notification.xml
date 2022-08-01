@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.profile.NotificationFragment">
+
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:navigationIcon="@drawable/ic_arrow_left_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/epilogue_regular"
+            android:text="@string/notifications"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/new_courses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_48"
+        android:fontFamily="@font/epilogue_regular"
+        android:text="@string/new_courses_reminders"
+        android:textColor="@color/colorTextAlt"
+        android:textSize="@dimen/text_14"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/new_course_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:thumb="@drawable/switch_thumb"
+        app:layout_constraintBaseline_toBaselineOf="@+id/new_courses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/switch_track" />
+
+    <TextView
+        android:id="@+id/wishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_32"
+        android:fontFamily="@font/epilogue_regular"
+        android:text="@string/wishlist_reminders"
+        android:textColor="@color/colorTextAlt"
+        android:textSize="@dimen/text_14"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_courses" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/wishlist_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:thumb="@drawable/switch_thumb"
+        app:layout_constraintBaseline_toBaselineOf="@+id/wishlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/switch_track" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_32"
+        android:fontFamily="@font/epilogue_regular"
+        android:text="@string/receive_email_notifications"
+        android:textColor="@color/colorTextAlt"
+        android:textSize="@dimen/text_14"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wishlist" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/email_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:thumb="@drawable/switch_thumb"
+        app:layout_constraintBaseline_toBaselineOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/switch_track" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".features.login.LoginFragment">
 
@@ -18,7 +17,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/tool_bar"
@@ -44,8 +44,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/margin_24"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_24"
                 android:background="@drawable/curved_layout"
                 app:layout_constraintTop_toBottomOf="@+id/tool_bar"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/epilogue_regular"
                         android:hint="@string/password"
-                        android:inputType="textEmailAddress"
+                        android:inputType="textPassword"
                         android:textColorHint="@color/colorPrimaryText" />
 
                 </com.google.android.material.textfield.TextInputLayout>

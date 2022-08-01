@@ -4,19 +4,382 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.profile.NotificationsFragment">
+    tools:context=".features.profile.ProfileFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:layout_height="@dimen/height_70"
+        android:background="@drawable/curved_toolbar_profile"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_32"
+            android:text="@string/account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_22"
+            android:textStyle="bold"
+            android:fontFamily="@font/epilogue_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tool_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:elevation="@dimen/margin_24">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/padding_24"
+                    android:paddingBottom="@dimen/padding_24"
+                    android:elevation="@dimen/padding_12"
+                    android:background="@drawable/curved_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/tool_bar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_profile_dummy"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_24"
+                        android:text="@string/jide_haruna"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/text_16"
+                        android:fontFamily="@font/epilogue_regular"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"/>
+
+
+                    <TextView
+                        android:id="@+id/label_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/padding_12"
+                        android:fontFamily="@font/epilogue_regular"
+                        android:text="@string/jide_haruna_mail_com"
+                        android:textColor="@color/colorTextAlt"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin_14"
+                        app:drawableStartCompat="@drawable/ic_email"
+                        app:layout_constraintEnd_toEndOf="@+id/label_name"
+                        app:layout_constraintTop_toBottomOf="@+id/label_name"
+                        app:layout_constraintStart_toStartOf="@+id/label_name" />
+
+                    <TextView
+                        android:id="@+id/verify_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_bg"
+                        android:fontFamily="@font/epilogue_regular"
+                        android:padding="4dp"
+                        android:text="@string/verify"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_12"
+                        android:textStyle="bold"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/label_email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/label_email" />
+
+                    <TextView
+                        android:id="@+id/link_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:fontFamily="@font/epilogue_regular"
+                        android:text="@string/a_verification_link_sent"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label_email" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card1"
+                android:elevation="@dimen/margin_24">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                    android:id="@+id/label_acct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/acct_settings"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="11sp"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:fontFamily="@font/epilogue_regular"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/edit_acct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/edit_profile"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label_acct"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                    <TextView
+                        android:id="@+id/change_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/change_pass"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edit_acct"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                    <TextView
+                        android:id="@+id/notifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/notifications"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/change_pass"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                    <TextView
+                        android:id="@+id/language"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/language"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/notifications"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                    <TextView
+                        android:id="@+id/close_acct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/close_acct"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/language"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card2"
+                android:elevation="@dimen/margin_24">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/label_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:text="@string/help_support"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="11sp"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:fontFamily="@font/epilogue_regular"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/about_ufc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/about"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label_help"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                    <TextView
+                        android:id="@+id/freq_asked"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/change_pass"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/about_ufc"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                    <TextView
+                        android:id="@+id/share"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14"
+                        android:text="@string/share_app"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:textColor="@color/colorPrimaryText"
+                        android:paddingHorizontal="@dimen/sm"
+                        android:paddingVertical="@dimen/xsm"
+                        android:fontFamily="@font/epilogue_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/freq_asked"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward"
+                        app:drawableTint="@color/colorPrimaryText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/sign_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:fontFamily="@font/epilogue_regular"
+                android:text="@string/sign_out"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card3" />
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:fontFamily="@font/epilogue_regular"
+                android:text="@string/version"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_12"
+                app:layout_constraintEnd_toEndOf="@+id/sign_out"
+                app:layout_constraintStart_toStartOf="@+id/sign_out"
+                app:layout_constraintTop_toBottomOf="@+id/sign_out"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,6 +34,10 @@ class LoginFragment : Fragment() {
             signUpText.setOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
             }
+
+            forgotPassword.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_resetPassFragment)
+            }
         }
     }
 
