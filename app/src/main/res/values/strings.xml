@@ -73,4 +73,8 @@
     <string name="spanish">Spanish</string>
     <string name="are_you_sure">Are you sure you want to close your account?</string>
     <string name="find_a_course">Find a course you want to learn</string>
+    <string name="top_rated">Top rated</string>
+    <string name="see_all"><u>See All</u></string>
+    <string name="our_top_picks_for_you">Our top picks for you</string>
+    <string name="courses_you_may_also_like">Courses you may also like</string>
 </resources>

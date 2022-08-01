@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/font/font.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/activity_starter.xml" value="0.265625" />
+        <entry key="app/src/main/res/layout/course_item.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_change_pass.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_close_account.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_create_new_pass.xml" value="0.265625" />
@@ -42,6 +43,7 @@
         <entry key="app/src/main/res/layout/interests_item.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/interests_items.xml" value="0.2786458333333333" />
         <entry key="app/src/main/res/layout/onboarding_items.xml" value="0.2796875" />
+        <entry key="app/src/main/res/layout/top_rated_course_item.xml" value="0.2796875" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2796875" />
       </map>
     </option>
