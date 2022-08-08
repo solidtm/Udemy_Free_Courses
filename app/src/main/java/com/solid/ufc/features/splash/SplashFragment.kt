@@ -11,8 +11,9 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SplashFragment : Fragment(R.layout.fragment_splash) {
     private lateinit var binding: FragmentSplashBinding
 
@@ -28,4 +29,10 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
         return binding.root
     }
+
+//    override fun onStart() {
+//        super.onStart()
+//        checkedLoggedInState()  //same func from login
+//    }
+
 }

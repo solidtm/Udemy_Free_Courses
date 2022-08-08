@@ -22,11 +22,11 @@ class ExploreFragment : Fragment() {
     ): View {
         binding = FragmentExploreBinding.inflate(layoutInflater)
 
-        setOnBoardingItems()
+        setCourseItems()
         return binding.root
     }
 
-    private fun setOnBoardingItems() {
+    private fun setCourseItems() {
         val courseItems = listOf(
             CourseItem(
                 courseImage = R.drawable.top_rated_image,

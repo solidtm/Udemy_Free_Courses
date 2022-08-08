@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "644171417497",
+    "project_id": "udemy-free-courses-b11c5",
+    "storage_bucket": "udemy-free-courses-b11c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644171417497:android:e9955c2df759d9cdc23508",
+        "android_client_info": {
+          "package_name": "com.solid.ufc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644171417497-cb9j1968347b9p6q3911f6eil48r6h4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF87tmSlzlk-TYRwbOV2sJ76AMUrbN15Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644171417497-cb9j1968347b9p6q3911f6eil48r6h4b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

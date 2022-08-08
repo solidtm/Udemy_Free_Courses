@@ -31,13 +31,11 @@ class CoursesItemAdapter : RecyclerView.Adapter<CourseItemViewHolder>(){
     }
 }
 
-
 class CourseItemViewHolder(val binding : TopRatedCourseItemBinding) : RecyclerView.ViewHolder(binding.root){
     private val courseImage = binding.imageView
     private val courseName = binding.courseName
     private val tutorName = binding.tutorName
     private val stars = binding.stars
-
     fun bind(courseItem: CourseItem){
         courseImage.setImageResource(courseItem.courseImage)
         courseName.text = courseItem.courseName

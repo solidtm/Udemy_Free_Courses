@@ -11,7 +11,9 @@ import androidx.navigation.fragment.findNavController
 import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentResetPassBinding
 import com.solid.ufc.databinding.FragmentVerifyBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class VerifyFragment : Fragment() {
 
     private lateinit var binding: FragmentVerifyBinding

@@ -13,9 +13,11 @@ import com.solid.ufc.HomeActivity
 import com.solid.ufc.R
 import com.solid.ufc.data.model.onboarding.OnBoardingItem
 import com.solid.ufc.databinding.FragmentOnboardingBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.abs
 
 
+@AndroidEntryPoint
 class OnBoardingFragment : Fragment(R.layout.fragment_onboarding),
     ViewPager2.PageTransformer {
     private lateinit var binding: FragmentOnboardingBinding

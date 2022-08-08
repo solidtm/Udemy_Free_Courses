@@ -9,7 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentCreateNewPassBinding
 import com.solid.ufc.databinding.FragmentVerifyBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CreateNewPassFragment : Fragment() {
 
     private lateinit var binding: FragmentCreateNewPassBinding

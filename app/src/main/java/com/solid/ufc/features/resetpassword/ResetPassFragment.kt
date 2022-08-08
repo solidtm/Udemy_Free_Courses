@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentResetPassBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ResetPassFragment : Fragment() {
 
     private lateinit var binding: FragmentResetPassBinding

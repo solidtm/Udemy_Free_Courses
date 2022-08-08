@@ -32,17 +32,16 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/top_rated_image"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/course_name"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_8"
             android:fontFamily="@font/epilogue_regular"
-            android:text="Business strategies\nand growth"
+            android:text="Business strategies and growth"
             android:textColor="@color/colorTextAlt"
             android:textSize="@dimen/text_16"
             android:textStyle="bold"

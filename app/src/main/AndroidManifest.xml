@@ -5,6 +5,7 @@
     package="com.solid.ufc">
 
     <application
+        android:name=".UFCApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,6 +18,7 @@
         <activity
             android:name=".HomeActivity"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true">
         </activity>
 
