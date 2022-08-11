@@ -38,7 +38,6 @@ class SignUpFragment : Fragment() {
         binding = FragmentSignUpBinding.inflate(layoutInflater)
 
         auth = FirebaseAuth.getInstance()
-        auth.signOut()
 
         setUpListeners()
         return binding.root
@@ -70,10 +69,11 @@ class SignUpFragment : Fragment() {
 
     private fun checkLoggedInState() {
         if (auth.currentUser == null){
+            println()
             Toast.makeText(context, "Invalid email or password", Toast.LENGTH_SHORT).show()
         }else{
             progressLoader.hide()
-            startActivity(Intent(context, HomeActivity::class.java))
+            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
     }
 
@@ -89,6 +89,10 @@ class SignUpFragment : Fragment() {
 
             signInText.setOnClickListener {
                 findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+            }
+
+            backBtn.setOnClickListener {
+                findNavController().navigateUp()
             }
         }
     }

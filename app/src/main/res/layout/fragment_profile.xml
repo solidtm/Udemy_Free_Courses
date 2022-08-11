@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".features.profile.ProfileFragment">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
@@ -33,10 +32,11 @@
             app:layout_constraintTop_toTopOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
                     app:layout_constraintBottom_toBottomOf="parent">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/profile_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/margin_16"
@@ -84,14 +84,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_24"
-                        android:text="@string/jide_haruna"
+                        android:text="Ayomide Yerokun"
                         android:textColor="@color/colorPrimaryText"
                         android:textSize="@dimen/text_16"
                         android:fontFamily="@font/epilogue_regular"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@+id/imageView"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView"/>
+                        app:layout_constraintStart_toStartOf="@+id/profile_image"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                        app:layout_constraintEnd_toEndOf="@+id/profile_image"/>
 
 
                     <TextView
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:drawablePadding="@dimen/padding_12"
                         android:fontFamily="@font/epilogue_regular"
-                        android:text="@string/jide_haruna_mail_com"
+                        android:text="ayomideyk22@gmail.com"
                         android:textColor="@color/colorTextAlt"
                         android:textStyle="bold"
                         android:layout_marginTop="@dimen/margin_14"
@@ -215,6 +215,7 @@
                         android:textColor="@color/colorPrimaryText"
                         android:paddingHorizontal="@dimen/sm"
                         android:paddingVertical="@dimen/xsm"
+                        android:visibility="gone"
                         android:fontFamily="@font/epilogue_regular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/change_pass"
@@ -233,6 +234,7 @@
                         android:textColor="@color/colorPrimaryText"
                         android:paddingHorizontal="@dimen/sm"
                         android:paddingVertical="@dimen/xsm"
+                        android:visibility="gone"
                         android:fontFamily="@font/epilogue_regular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/notifications"
@@ -251,6 +253,7 @@
                         android:textColor="@color/colorPrimaryText"
                         android:paddingHorizontal="@dimen/sm"
                         android:paddingVertical="@dimen/xsm"
+
                         android:fontFamily="@font/epilogue_regular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -313,12 +316,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/text_14"
-                        android:text="@string/change_pass"
+                        android:text="@string/frequently_asked_questions"
                         android:layout_marginTop="@dimen/margin_8"
                         android:layout_marginBottom="@dimen/margin_16"
                         android:textColor="@color/colorPrimaryText"
                         android:paddingHorizontal="@dimen/sm"
                         android:paddingVertical="@dimen/xsm"
+                        android:visibility="gone"
                         android:fontFamily="@font/epilogue_regular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/about_ufc"
@@ -367,7 +371,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_8"
-                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/height_100"
                 android:fontFamily="@font/epilogue_regular"
                 android:text="@string/version"
                 android:textColor="@color/colorPrimaryText"
@@ -377,8 +381,6 @@
                 app:layout_constraintStart_toStartOf="@+id/sign_out"
                 app:layout_constraintTop_toBottomOf="@+id/sign_out"
                 app:layout_constraintBottom_toBottomOf="parent"/>
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

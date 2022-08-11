@@ -86,6 +86,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/epilogue_regular"
                         android:hint="@string/enter_email_address"
+                        android:text="test@test.com"
                         android:inputType="textEmailAddress"
                         android:textColorHint="@color/colorPrimaryText" />
 
@@ -100,9 +101,9 @@
                     android:layout_marginTop="@dimen/margin_32"
                     app:hintEnabled="false"
                     app:startIconDrawable="@drawable/ic_lock"
-                    app:endIconMode="custom"
                     app:hintTextColor="@color/colorPrimaryText"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:passwordToggleEnabled="true"
                     app:layout_constraintStart_toStartOf="@+id/email_layout"
                     app:layout_constraintTop_toBottomOf="@+id/email_layout">
 
@@ -112,6 +113,7 @@
                         android:fontFamily="@font/epilogue_regular"
                         android:hint="@string/password"
                         android:inputType="textPassword"
+                        android:text="password"
                         android:textColorHint="@color/colorPrimaryText" />
 
                 </com.google.android.material.textfield.TextInputLayout>

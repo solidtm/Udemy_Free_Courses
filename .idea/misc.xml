@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/curved_appbar.xml" value="0.205" />
+        <entry key="app/src/main/res/drawable-v24/ic_error.xml" value="0.205" />
         <entry key="app/src/main/res/drawable-v24/switch_thumb.xml" value="0.214" />
         <entry key="app/src/main/res/drawable/button_onboarding_indicator.xml" value="0.181" />
         <entry key="app/src/main/res/drawable/check_selector_bg.xml" value="0.2055" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.181" />
+        <entry key="app/src/main/res/drawable/curved_appbar.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/curved_layout.xml" value="0.2055" />
-        <entry key="app/src/main/res/drawable/curved_toolbar.xml" value="0.6656997680664063" />
+        <entry key="app/src/main/res/drawable/curved_toolbar.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/curved_toolbar_profile.xml" value="0.2055" />
         <entry key="app/src/main/res/drawable/custom_filter_btn.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/custom_img_btn.xml" value="0.181" />
+        <entry key="app/src/main/res/drawable/ic_error.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/items_bg.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/items_checked_bg.xml" value="0.312" />
         <entry key="app/src/main/res/drawable/searchview_background.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/switch_thumb.xml" value="0.214" />
         <entry key="app/src/main/res/drawable/switch_track.xml" value="0.214" />
@@ -41,7 +46,7 @@
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/fragment_verify.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/fragment_wishlist.xml" value="0.2796875" />
-        <entry key="app/src/main/res/layout/interests_item.xml" value="0.2796875" />
+        <entry key="app/src/main/res/layout/interests_item.xml" value="0.18" />
         <entry key="app/src/main/res/layout/interests_items.xml" value="0.2786458333333333" />
         <entry key="app/src/main/res/layout/onboarding_items.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/top_rated_course_item.xml" value="0.2796875" />

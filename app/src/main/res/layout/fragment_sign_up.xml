@@ -146,6 +146,7 @@
                     android:layout_marginTop="@dimen/margin_24"
                     app:hintEnabled="false"
                     app:hintTextColor="@color/colorPrimaryText"
+                    app:passwordToggleEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/email_layout"
                     app:layout_constraintTop_toBottomOf="@+id/email_layout">
@@ -155,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/epilogue_regular"
                         android:hint="@string/password"
-                        android:inputType="textEmailAddress"
+                        android:inputType="textPassword"
                         android:textColorHint="@color/colorPrimaryText" />
 
                 </com.google.android.material.textfield.TextInputLayout>

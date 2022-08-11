@@ -13,6 +13,8 @@ import com.solid.ufc.HomeActivity
 import com.solid.ufc.R
 import com.solid.ufc.data.model.onboarding.OnBoardingItem
 import com.solid.ufc.databinding.FragmentOnboardingBinding
+import com.solid.ufc.util.SharePreference
+import com.solid.ufc.util.SharedPrefKeys
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.abs
 
@@ -52,13 +54,13 @@ class OnBoardingFragment : Fragment(R.layout.fragment_onboarding),
             ),
             OnBoardingItem(
                 image = R.drawable.ic_onboard2,
-                title = "Get Course Notifications",
+                title = "New Course Notifications",
                 description = "Receive notifications on new and existing\n free courses based on your selected\n interests."
             ),
             OnBoardingItem(
                 image = R.drawable.ic_onboard3,
                 title = "Explore Top-rated Courses",
-                description = "Explore top rated courses and courses on\n demand, selected just for \n" +
+                description = "Explore top rated courses on\n demand, selected just for \n" +
                         "you."
             )
         )
@@ -84,6 +86,7 @@ class OnBoardingFragment : Fragment(R.layout.fragment_onboarding),
                 }
                 else -> {
                     findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment)
+                    SharePreference(requireContext()).setBoolean(SharedPrefKeys.ONBOARDED, true)
                 }
             }
         }
@@ -109,6 +112,7 @@ class OnBoardingFragment : Fragment(R.layout.fragment_onboarding),
     private fun configureSkipText() {
         binding.textSkip.setOnClickListener {
             findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment)
+            SharePreference(requireContext()).setBoolean(SharedPrefKeys.ONBOARDED, true)
         }
     }
 

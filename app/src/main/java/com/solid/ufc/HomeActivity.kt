@@ -1,12 +1,10 @@
 package com.solid.ufc
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.solid.ufc.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,5 +26,9 @@ class HomeActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         navView.setupWithNavController(navController)
         navView.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
+    }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true)
     }
 }
