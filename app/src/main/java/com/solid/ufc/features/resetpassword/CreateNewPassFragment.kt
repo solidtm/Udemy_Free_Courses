@@ -30,7 +30,7 @@ class CreateNewPassFragment : Fragment() {
     private fun registerListeners() {
         with(binding){
             buttonChangePass.setOnClickListener {
-                findNavController().navigate(R.id.action_createNewPassFragment_to_loginFragment)
+//                findNavController().navigate(R.id.action_createNewPassFragment_to_loginFragment)
             }
         }
     }

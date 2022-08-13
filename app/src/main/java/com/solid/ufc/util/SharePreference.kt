@@ -12,9 +12,8 @@ import javax.inject.Inject
 class SharePreference @Inject constructor(@ApplicationContext context: Context) {
 
     companion object {
-        private const val AGENT_ID_KEY = "AGENT_ID_KEY"
-        private const val TOKEN_KEY = "TOKEN"
-        private const val FCM_TOKEN_SENT = "FCM_TOKEN_SENT"
+        private const val USERNAME = "USERNAME"
+        private const val PASSWORD = "PASSWORD"
     }
 
     private var sharedPreferences: SharedPreferences =
@@ -33,16 +32,16 @@ class SharePreference @Inject constructor(@ApplicationContext context: Context) 
         }
     }
 
-    var agentId: String
-        get() = sharedPreferences.getString(AGENT_ID_KEY, "") ?: ""
+    var username: String
+        get() = sharedPreferences.getString(SharedPrefKeys.USERNAME, "") ?: ""
         set(value) {
-            sharedPreferences.edit().putString(AGENT_ID_KEY, value).apply()
+            sharedPreferences.edit().putString(SharedPrefKeys.USERNAME, value).apply()
         }
 
-    var token: String
-        get() = sharedPreferences.getString(TOKEN_KEY, "") ?: ""
+    var password: String
+        get() = sharedPreferences.getString(SharedPrefKeys.PASSWORD, "") ?: ""
         set(value) {
-            sharedPreferences.edit().putString(TOKEN_KEY, value).apply()
+            sharedPreferences.edit().putString(SharedPrefKeys.PASSWORD, value).apply()
         }
 
 

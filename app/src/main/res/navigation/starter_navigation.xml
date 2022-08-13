@@ -63,8 +63,8 @@
         android:label="fragment_reset_pass"
         tools:layout="@layout/fragment_reset_pass" >
         <action
-            android:id="@+id/action_resetPassFragment_to_verifyFragment"
-            app:destination="@id/verifyFragment" />
+            android:id="@+id/action_resetPassFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_resetPassFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
@@ -91,9 +91,5 @@
         android:id="@+id/createNewPassFragment"
         android:name="com.solid.ufc.features.resetpassword.CreateNewPassFragment"
         android:label="fragment_create_new_pass"
-        tools:layout="@layout/fragment_create_new_pass" >
-        <action
-            android:id="@+id/action_createNewPassFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_create_new_pass" />
 </navigation>

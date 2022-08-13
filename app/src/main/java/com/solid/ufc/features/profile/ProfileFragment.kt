@@ -1,6 +1,5 @@
 package com.solid.ufc.features.profile
 
-import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
@@ -17,7 +16,7 @@ import com.solid.ufc.StarterActivity
 import com.solid.ufc.databinding.FragmentProfileBinding
 import com.solid.ufc.util.SharePreference
 import com.solid.ufc.util.SharedPrefKeys
-import kotlin.math.sign
+import com.solid.ufc.util.showDialog
 
 class ProfileFragment : Fragment() {
 
@@ -56,13 +55,29 @@ class ProfileFragment : Fragment() {
             signOut.setOnClickListener {
                 signOut()
             }
+
+            verifyText.setOnClickListener {
+                sendVerifyEmail()
+            }
         }
     }
 
-    @SuppressLint("SetTextI18n")
+    private fun sendVerifyEmail() {
+        auth.currentUser?.sendEmailVerification()?.addOnSuccessListener {
+            SharePreference(requireContext()).setBoolean(SharedPrefKeys.IS_VERIFIED, true)
+            context?.showDialog(
+                title = "Notice",
+                message = "Email verification link sent!"
+            ){
+                findNavController().navigateUp()
+            }
+        }
+    }
+
+
     override fun onResume() {
         super.onResume()
-//        setupUI()
+        setupUI()
     }
 
     private fun setupUI(){
@@ -70,10 +85,22 @@ class ProfileFragment : Fragment() {
         val lastName = SharePreference(requireContext()).getString(SharedPrefKeys.LAST_NAME)
         val email = SharePreference(requireContext()).getString(SharedPrefKeys.EMAIL)
         val imageUrl = SharePreference(requireContext()).getString(SharedPrefKeys.IMG_URL)
+        val isVerified = SharePreference(requireContext()).getBoolean(SharedPrefKeys.IS_VERIFIED)
+
+        println("$firstName, $lastName, $email, $isVerified")
 
         binding.labelName.text = "$firstName  $lastName"
         binding.labelEmail.text = email
-        loadProfileImage(imageUrl)
+        if (isVerified){
+            with(binding){
+                verifyText.visibility = View.GONE
+            }
+        }else{
+            with(binding){
+                verifyText.visibility = View.VISIBLE
+            }
+        }
+//      loadProfileImage(imageUrl)
     }
 
     private fun loadProfileImage(imageUrl: String){
@@ -89,10 +116,12 @@ class ProfileFragment : Fragment() {
             .setCancelable(false)
             .setPositiveButton("Yes") { _, _ ->
                 auth.signOut()
-                SharePreference(requireContext()).clear(SharedPrefKeys.TOKEN)
+                SharePreference(requireContext()).clear(SharedPrefKeys.USERNAME)
                 SharePreference(requireContext()).clear(SharedPrefKeys.FIRST_NAME)
                 SharePreference(requireContext()).clear(SharedPrefKeys.LAST_NAME)
                 SharePreference(requireContext()).clear(SharedPrefKeys.IMG_URL)
+                SharePreference(requireContext()).clear(SharedPrefKeys.INTERESTS)
+                SharePreference(requireContext()).clear(SharedPrefKeys.INTEREST_CAPTURED)
                 startActivity(Intent(requireContext(), StarterActivity::class.java))
                 activity?.finish()
             }

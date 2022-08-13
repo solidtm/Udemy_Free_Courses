@@ -83,21 +83,21 @@
                     android:id="@+id/email_layout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_32"
                     app:hintEnabled="false"
-                    app:hintTextColor="@color/colorPrimaryText"
+                    app:hintTextColor="@color/colorTextAlt"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/forgot_pass_text"
                     app:layout_constraintTop_toBottomOf="@+id/forgot_pass_text">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_ed_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/epilogue_regular"
                         android:hint="@string/enter_email_address"
-                        android:inputType="textEmailAddress"
-                        android:textColorHint="@color/colorPrimaryText" />
+                        android:inputType="textEmailAddress"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,7 +109,7 @@
                     android:padding="@dimen/padding_12"
                     android:backgroundTint="@color/colorPrimary"
                     android:fontFamily="@font/epilogue_regular"
-                    android:text="@string/send_verification_code"
+                    android:text="@string/send_instructions"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textStyle="bold"

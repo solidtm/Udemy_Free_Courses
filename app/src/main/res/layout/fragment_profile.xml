@@ -50,7 +50,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/card1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -58,11 +58,11 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:paddingTop="@dimen/padding_24"
                     android:paddingBottom="@dimen/padding_24"
                     android:elevation="@dimen/padding_12"
-                    android:background="@drawable/curved_layout"
+                    android:background="@color/white"
                     app:layout_constraintTop_toBottomOf="@+id/tool_bar"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -120,30 +120,19 @@
                         android:textColor="@color/colorAccent"
                         android:textSize="@dimen/text_12"
                         android:textStyle="bold"
+                        android:visibility="gone"
                         app:layout_constraintBaseline_toBaselineOf="@+id/label_email"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/label_email" />
 
-                    <TextView
-                        android:id="@+id/link_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_8"
-                        android:fontFamily="@font/epilogue_regular"
-                        android:text="@string/a_verification_link_sent"
-                        android:textColor="@color/colorAccent"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/text_12"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/label_email" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_8"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -268,7 +257,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/card3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_8"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

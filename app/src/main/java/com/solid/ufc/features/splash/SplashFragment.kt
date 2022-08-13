@@ -1,6 +1,7 @@
 package com.solid.ufc.features.splash
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.solid.ufc.BuildConfig
 import com.solid.ufc.HomeActivity
 import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentSplashBinding
@@ -29,6 +31,8 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
         Handler(Looper.getMainLooper()).postDelayed({
             checkLoginState()
+            SharePreference(requireContext()).setString(SharedPrefKeys.USERNAME, BuildConfig.USERNAME)
+            SharePreference(requireContext()).setString(SharedPrefKeys.PASSWORD, BuildConfig.PASSWORD)
         }, 2000)
 
         return binding.root

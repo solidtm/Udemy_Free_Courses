@@ -1,7 +1,7 @@
 package com.solid.ufc.util
 
 object SharedPrefKeys {
-    const val TOKEN = "TOKEN"
+    const val USERNAME = "USERNAME"
     const val EMAIL = "EMAIL"
     const val PASSWORD = "PASSWORD"
     const val FIRST_NAME = "FIRST_NAME"
@@ -11,4 +11,7 @@ object SharedPrefKeys {
     const val GOOGLE_LOGIN = "GOOGLE_LOGIN"
     const val ONBOARDED = "ONBOARDED"
     const val INTERESTS = "INTERESTS"
+    const val INTEREST_CAPTURED = "INTEREST_CAPTURED"
+    const val IS_VERIFIED = "IS_VERIFIED"
+    const val SEE_ALL = "SEE_ALL"
 }

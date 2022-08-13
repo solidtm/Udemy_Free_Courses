@@ -16,6 +16,9 @@ import com.solid.ufc.HomeActivity
 import com.solid.ufc.R
 import com.solid.ufc.data.model.signup.InterestItem
 import com.solid.ufc.databinding.FragmentInterestsBinding
+import com.solid.ufc.util.SharePreference
+import com.solid.ufc.util.SharedPrefKeys
+import java.lang.StringBuilder
 
 
 class InterestsFragment : Fragment() {
@@ -38,6 +41,12 @@ class InterestsFragment : Fragment() {
     private fun setUpListeners() {
         with(binding) {
             continueBtn.setOnClickListener {
+                val sb = StringBuilder()
+                for (i in 0 until interests.size) {
+                   sb.append(interests[i] + " ")
+                }
+                SharePreference(requireContext()).setString(SharedPrefKeys.INTERESTS, sb.toString())
+                SharePreference(requireContext()).setBoolean(SharedPrefKeys.INTERESTS, true)
                 startActivity(Intent(requireContext(), HomeActivity::class.java))
             }
         }

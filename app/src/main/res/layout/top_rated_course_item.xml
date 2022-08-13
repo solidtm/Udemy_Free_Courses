@@ -26,8 +26,8 @@
         <ImageView
             android:id="@+id/image_view"
             android:padding="@dimen/margin_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
             android:layout_margin="@dimen/margin_16"
             android:contentDescription="@string/app_name"
             android:src="@drawable/top_rated_image"

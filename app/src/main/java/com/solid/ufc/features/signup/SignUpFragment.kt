@@ -14,6 +14,8 @@ import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentOnboardingBinding
 import com.solid.ufc.databinding.FragmentSignUpBinding
 import com.solid.ufc.util.ProgressLoader
+import com.solid.ufc.util.SharePreference
+import com.solid.ufc.util.SharedPrefKeys
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -27,6 +29,9 @@ import javax.inject.Inject
 class SignUpFragment : Fragment() {
     private lateinit var binding: FragmentSignUpBinding
     lateinit var auth : FirebaseAuth
+    private lateinit var  firstName: String
+    private lateinit var lastName: String
+    private lateinit var email: String
 
     @Inject
     lateinit var progressLoader: ProgressLoader
@@ -39,14 +44,19 @@ class SignUpFragment : Fragment() {
 
         auth = FirebaseAuth.getInstance()
 
+
         setUpListeners()
         return binding.root
     }
 
 
     private fun registerUser(){
-        val email = binding.emailLayout.editText?.text.toString().trim()
         val password = binding.passLayout.editText?.text.toString().trim()
+        with(binding){
+            email = binding.emailLayout.editText?.text.toString().trim()
+            firstName = firstNameLayout.editText?.text.toString().trim()
+            lastName = lastNameLayout.editText?.text.toString().trim()
+        }
 
         if (inputsValid(email, password)){
             progressLoader.show("Please wait...", false)
@@ -54,7 +64,7 @@ class SignUpFragment : Fragment() {
                 try {
                     auth.createUserWithEmailAndPassword(email, password).await()
                     withContext(Dispatchers.Main){
-                        checkLoggedInState()
+                        checkLoggedInState(email)
                     }
                 }catch (ex: Exception){
                     withContext(Dispatchers.Main){
@@ -67,12 +77,15 @@ class SignUpFragment : Fragment() {
     }
 
 
-    private fun checkLoggedInState() {
+    private fun checkLoggedInState(email: String) {
         if (auth.currentUser == null){
-            println()
+            progressLoader.hide()
             Toast.makeText(context, "Invalid email or password", Toast.LENGTH_SHORT).show()
         }else{
             progressLoader.hide()
+            SharePreference(requireContext()).setString(SharedPrefKeys.FIRST_NAME, firstName)
+            SharePreference(requireContext()).setString(SharedPrefKeys.LAST_NAME, lastName)
+            SharePreference(requireContext()).setString(SharedPrefKeys.EMAIL, email)
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
     }

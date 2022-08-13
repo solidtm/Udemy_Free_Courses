@@ -19,6 +19,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        buildConfigField "String", "BASE_URL", "\"https://www.udemy.com/api-2.0/\""
+        buildConfigField "String", "USERNAME", "\"bdw3ImTwx6HoQ3FhW4sUanlhnGXkb9e5Opr5WQb3\""
+        buildConfigField "String", "PASSWORD", "\"NLZahM0GO4ALXfsEyZWSiVU9EXIhMIaNo9A8zBbVIfR9UJEoTaLSQ7JUCac4oj4pJW5IrwIr6Qq39xzxPThNqu6iBCkzhtFTH0eaV52bFxjBVZP8UHu8xAXTwbCSfB3t\""
+        buildConfigField "String", "AUTH_TOKEN", "\"YmR3M0ltVHd4NkhvUTNGaFc0c1VhbmxobkdYa2I5ZTVPcHI1V1FiMzpOTFphaE0wR080QUxYZnNFeVpXU2lWVTlFWEloTUlhTm85QTh6QmJWSWZSOVVKRW9UYUxTUTdKVUNhYzRvajRwSlc1SXJ3SXI2UXEzOXh6eFBUaE5xdTZpQkNremh0RlRIMGVhVjUyYkZ4akJWWlA4VUh1OHhBWFR3YkNTZkIzdA==\""
     }
 
     buildTypes {
@@ -43,6 +49,7 @@ android {
 dependencies {
 
 
+    implementation 'com.google.firebase:firebase-database:20.0.5'
     def lifecycle_version = "2.5.1"
     def roomVersion = "2.4.2"
     def coroutines_version = "1.6.1"

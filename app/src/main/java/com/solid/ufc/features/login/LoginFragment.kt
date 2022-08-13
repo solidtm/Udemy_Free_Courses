@@ -20,6 +20,8 @@ import com.solid.ufc.HomeActivity
 import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentLoginBinding
 import com.solid.ufc.util.ProgressLoader
+import com.solid.ufc.util.SharePreference
+import com.solid.ufc.util.SharedPrefKeys
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -32,7 +34,7 @@ const val REQUEST_CODE_SIGN_IN = 0
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
-    lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
 
     private lateinit var binding: FragmentLoginBinding
 
@@ -126,8 +128,8 @@ class LoginFragment : Fragment() {
     }
 
     private fun loginUserWithEmailAndPass() {
-        val email = binding.emailLayout.editText?.text.toString().trim()
-        val password = binding.passLayout.editText?.text.toString().trim()
+        val email = binding.emailLayout.editText?.text.toString().trim{ it <= ' '}
+        val password = binding.passLayout.editText?.text.toString().trim{ it <= ' '}
 
         if (inputsValid(email, password)) {
             progressLoader.show("Logging in...", false)
@@ -135,7 +137,7 @@ class LoginFragment : Fragment() {
                 try {
                     auth.signInWithEmailAndPassword(email, password).await()
                     withContext(Dispatchers.Main) {
-                        checkLoggedInState()
+                        checkLoggedInState(email)
                     }
                 } catch (ex: Exception) {
                     withContext(Dispatchers.Main) {
@@ -149,18 +151,31 @@ class LoginFragment : Fragment() {
         }
     }
 
-
-    private fun checkLoggedInState() {
+    private fun checkLoggedInState(email: String) {
         if (auth.currentUser == null) {
             progressLoader.hide()
             Toast.makeText(context, "Invalid email or password", Toast.LENGTH_SHORT).show()
         } else {
             progressLoader.hide()
-            findNavController().navigate(R.id.action_loginFragment_to_interestsFragment)
-//            startActivity(Intent(context, HomeActivity::class.java))
+
+            if (!auth.currentUser?.isEmailVerified!!){
+                SharePreference(requireContext()).setBoolean(SharedPrefKeys.IS_VERIFIED, false)
+            }else{
+                SharePreference(requireContext()).setBoolean(SharedPrefKeys.IS_VERIFIED, true)
+            }
+
+            val prefEmail = SharePreference(requireContext()).getString(SharedPrefKeys.EMAIL)
+            val interestSet = SharePreference(requireContext()).getBoolean(SharedPrefKeys.INTEREST_CAPTURED)
+            if (prefEmail == email || interestSet){
+                startActivity(Intent(context, HomeActivity::class.java))
+            }else{
+                SharePreference(requireContext()).setString(SharedPrefKeys.EMAIL, email)
+                findNavController().navigate(R.id.action_loginFragment_to_interestsFragment)
+            }
         }
     }
 
+    @Suppress("DEPRECATION")
     private fun loginUserWithGoogle() {
         val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(resources.getString(R.string.web_client_id))

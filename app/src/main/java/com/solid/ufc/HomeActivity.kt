@@ -28,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
         navView.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
     }
 
-    override fun onBackPressed() {
-        moveTaskToBack(true)
-    }
+//    override fun onBackPressed() {
+//        moveTaskToBack(true)
+//    }
 }

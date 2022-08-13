@@ -9,7 +9,14 @@
         android:id="@+id/navigation_explore"
         android:name="com.solid.ufc.features.explore.ExploreFragment"
         android:label="@string/explore"
-        tools:layout="@layout/fragment_explore" />
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_navigation_explore_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_explore_to_seeAllFragment"
+            app:destination="@id/seeAllFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_wishlist"
@@ -63,4 +70,9 @@
         android:name="com.solid.ufc.features.profile.CloseAccountFragment"
         android:label="fragment_close_account"
         tools:layout="@layout/fragment_close_account" />
+    <fragment
+        android:id="@+id/seeAllFragment"
+        android:name="com.solid.ufc.features.explore.SeeAllFragment"
+        android:label="fragment_see_all"
+        tools:layout="@layout/fragment_see_all" />
 </navigation>

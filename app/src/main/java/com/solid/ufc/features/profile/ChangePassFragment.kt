@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.solid.ufc.R
 import com.solid.ufc.databinding.FragmentChangePassBinding
 
@@ -17,6 +18,10 @@ class ChangePassFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View{
         binding = FragmentChangePassBinding.inflate(layoutInflater)
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
 
         return binding.root
     }

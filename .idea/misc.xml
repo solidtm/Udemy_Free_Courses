@@ -40,7 +40,7 @@
         <entry key="app/src/main/res/layout/fragment_onboarding.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/fragment_onboardingragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22109375" />
-        <entry key="app/src/main/res/layout/fragment_reset_pass.xml" value="0.265625" />
+        <entry key="app/src/main/res/layout/fragment_reset_pass.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_see_all.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.2796875" />
