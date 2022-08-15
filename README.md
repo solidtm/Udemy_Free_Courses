@@ -1,7 +1,7 @@
 # Udemy_Free_Courses
 Android mobile application which aids and allows easy and fast access to free courses, where a prospective student or learner can readily access free course, manage interests, review and see ratings and detais about courses and enroll in them.
 
-Setup
+# Setup  
 This project follows the Clean Architecture, is based on the MVVM model and is organized according to the following (feature based) packages:
 
 core
