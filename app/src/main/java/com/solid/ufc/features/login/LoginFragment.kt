@@ -184,6 +184,7 @@ class LoginFragment : Fragment() {
             .build()
 
         val signInClient = GoogleSignIn.getClient(requireActivity(), options)
+        println(signInClient.signInIntent.data?.userInfo.toString())
         signInClient.signInIntent.also {
             startActivityForResult(it, REQUEST_CODE_SIGN_IN)
         }
@@ -194,10 +195,11 @@ class LoginFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_SIGN_IN) {
-
-            val account = GoogleSignIn.getSignedInAccountFromIntent(data).result
-            account?.let {
-                googleAuthForFirebase(it)
+            if(GoogleSignIn.getSignedInAccountFromIntent(data).result != null){
+                val account = GoogleSignIn.getSignedInAccountFromIntent(data).result
+                account?.let {
+                    googleAuthForFirebase(it)
+                }
             }
         }
     }

@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:queryHint="Search"
                 android:iconifiedByDefault="false"
-                android:layout_marginEnd="@dimen/height_100"
+                android:layout_marginEnd="24dp"
                 android:layout_marginTop="@dimen/margin_24"
                 android:layout_marginBottom="@dimen/margin_16"
                 android:backgroundTint="@color/white"
@@ -70,20 +70,20 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageButton
-                android:id="@+id/onboard_back_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_16"
-                android:layout_marginTop="@dimen/margin_24"
-                android:padding="@dimen/margin_16"
-                android:background="@drawable/custom_filter_btn"
-                android:backgroundTint="@color/white"
-                android:contentDescription="@string/previous"
-                app:layout_constraintStart_toEndOf="@id/searchView"
-                app:layout_constraintTop_toBottomOf="@id/find"
-                app:srcCompat="@drawable/ic_filter"
-                tools:ignore="TouchTargetSizeCheck" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/onboard_back_btn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/margin_16"-->
+<!--                android:layout_marginTop="@dimen/margin_24"-->
+<!--                android:padding="@dimen/margin_16"-->
+<!--                android:background="@drawable/custom_filter_btn"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:contentDescription="@string/previous"-->
+<!--                app:layout_constraintStart_toEndOf="@id/searchView"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/find"-->
+<!--                app:srcCompat="@drawable/ic_filter"-->
+<!--                tools:ignore="TouchTargetSizeCheck" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

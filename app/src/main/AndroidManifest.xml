@@ -4,6 +4,8 @@
     tools:ignore="LockedOrientationActivity"
     package="com.solid.ufc">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".UFCApplication"
         android:allowBackup="true"

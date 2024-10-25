@@ -86,7 +86,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/epilogue_regular"
                         android:hint="@string/enter_email_address"
-                        android:text="richardebboh@gmail.com"
+                        android:text=""
                         android:inputType="textEmailAddress"
                         android:textColorHint="@color/colorPrimaryText" />
 
@@ -113,7 +113,7 @@
                         android:fontFamily="@font/epilogue_regular"
                         android:hint="@string/password"
                         android:inputType="textPassword"
-                        android:text="55G4f8,4"
+                        android:text=""
                         android:textColorHint="@color/colorPrimaryText" />
 
                 </com.google.android.material.textfield.TextInputLayout>
